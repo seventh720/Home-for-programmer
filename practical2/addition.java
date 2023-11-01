@@ -9,9 +9,9 @@ public class addition{
         int sum = 0;
         if(start < end){
             sum = start;
-            do{start = start+1;
+            while(start < end){start = start+1;
                 sum += start;
-            }while(start < end);
+            };
             System.out.printf("Result is: %d", sum);
         }
         else if (start == end){
