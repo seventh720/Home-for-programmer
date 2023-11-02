@@ -20,6 +20,7 @@ public class addition{
         }
         else{
             System.out.println("Wrong input");
+            input.close();
         }
     }
 }
