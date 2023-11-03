@@ -6,6 +6,7 @@ class Door {
         if (!isOpen) {
             System.out.println("Door opened");
             isOpen = true;
+            return;
         } else {
             System.out.println("Door already open!");
         }
@@ -15,6 +16,7 @@ class Door {
         if (isOpen) {
             System.out.println("Door closed");
             isOpen = false;
+            return;
         } else {
             System.out.println("Door already closed!");
         }
@@ -36,20 +38,25 @@ class DoorWithLock extends Door {
     public void lockDoor() {
         if (isOpen) {
             System.out.println("Open door cannot be locked!");
+            return;
         } else if (isLocked) {
             System.out.println("Door already locked!");
+            return;
         } else {
             System.out.println("Door locked");
             isLocked = true;
+            return;
         }
     }
 
     public void unlockDoor() {
         if (!isLocked) {
             System.out.println("Door is not locked!");
+            return;
         } else {
             System.out.println("Door unlocked");
             isLocked = false;
+            return;
         }
     }
 }
